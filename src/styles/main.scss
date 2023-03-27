@@ -1,11 +1,6 @@
-@font-face {
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    src: url();
-}
-
-
 *, *::before, *::after {
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -15,7 +10,11 @@
 html, body {
     height: 100%;
 }
-  
+
+button:hover    {
+    cursor: pointer;
+}
+
 .main-container    {
     width: 100vw;
     height: 100vh;
@@ -23,16 +22,7 @@ html, body {
     grid-template-rows: 10% 85% 5%;
 }
 
-.container  {
-    display: grid;
-    grid-row-start: 2;
-    grid-row-end: 2;
-    grid-template-columns: 1fr 1fr;
-
-    padding: 20px;
-}
-
-// Header
+//  Header
 header  {
     grid-row-start: 1;
     grid-row-end: 1;
@@ -40,24 +30,119 @@ header  {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: honeydew;
+    background-color: rgb(192, 240, 192);
+}
+ 
+//  Container
+.container  {
+    display: grid;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    background-color:rgb(243, 243, 243);
+}
+
+.container > * {
+    margin: 10px 40px;
+}
+
+.builder    {
+    display: grid;
+    grid-template-rows: 90% 10%;
+}
+
+.main-builder   {
+    display: grid;
+    grid-template-rows: 10% 90%;
+    background-color: rgb(245, 245, 245);
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.main-builder-buttons    {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main-builder-buttons button {
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    font-size: 15px;
+    background-color: rgb(219, 219, 219);
+}
+
+.main-builder-buttons button:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+.builder-display  {
+    padding: 10px;
+}
+
+.edit-buttons   {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.edit-buttons button   {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 10px;
+    border: 0px;
+    border-radius: 5px;
+    margin: 5px;
+    text-align: center;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    font-size: 15px;
+}
+
+.edit-buttons button:hover   {
+    background-color: rgb(224, 224, 224);
+}
+
+#form-example-button   {
+    background-color: rgb(217, 227, 230);
+}
+
+#form-example-button:hover   {
+    background-color: rgb(191, 207, 212);
+}
+
+#print-pdf-button   {
+    background-color: rgb(217, 230, 217);
+}
+
+#print-pdf-button:hover   {
+    background-color: rgb(192, 214, 192);
+}
+
+#reset-forms-button   {
+    background-color: rgb(230, 217, 217);
+}
+
+#reset-forms-button:hover   {
+    background-color: rgb(211, 190, 190);
+}
+
+
+
+
+.resume {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    background-color: rgb(255, 255, 255);
 }
 
 //  Footer
-footer{
+footer  {
     grid-row-start: 3;
     grid-row-end: 3;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: honeydew;
-}
-
-
-// For Layout
-.container > * {
-    border: 1px solid red;
-    background-color: rgb(226, 225, 217);
-    margin: 10px;
+    background-color: rgb(192, 240, 192);
 }

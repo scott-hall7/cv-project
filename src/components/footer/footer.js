@@ -4,7 +4,7 @@ class Footer extends Component  {
     render() {
         return  (
             <footer>
-                <h3>Created by Scott-Hall7</h3>
+                <h4>Created by Scott-Hall7</h4>
             </footer>
         )
     }
