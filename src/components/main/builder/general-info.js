@@ -5,19 +5,19 @@ class General extends Component  {
         return  (
             <div className="general-info">
                 <form className="general-info-form">
-                    <label for="fname">First name:</label>
+                    <label htmlFor="fname">First name:</label>
                     <input type="text" id="fname" name="fname" />
 
-                    <label for="lname">Last name:</label>
+                    <label htmlFor="lname">Last name:</label>
                     <input type="text" id="lname" name="lname" />
 
-                    <label for="phone">Phone number:</label>
+                    <label htmlFor="phone">Phone number:</label>
                     <input type="tel" id="phone" name="phone" />
 
-                    <label for="email">Email:</label>
+                    <label htmlFor="email">Email:</label>
                     <input type="email" id="email" name="email" />
                     
-                    <label for="location">City & State:</label>
+                    <label htmlFor="location">City & State:</label>
                     <input type="text" id="location" name="location" />
                 </form>
             </div>

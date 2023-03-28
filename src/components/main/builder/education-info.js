@@ -4,7 +4,7 @@ class Education extends Component  {
     render() {
         return  (
             <div className="education-info">
-                <h1>hi</h1>
+                <h1>Education</h1>
             </div>
         )
     }
