@@ -1,14 +1,29 @@
-*, *::before, *::after {
-    box-sizing: border-box;
+:root   {
+    --fs-title: 1.5rem;
+    --fs-header: .688rem;
+    --fs-body: .625rem;
+}
+
+html, body, p, h2, h5 {
     font-family: Arial, Helvetica, sans-serif;
-}
-
-* {
     margin: 0;
+    padding: 0;
 }
 
-html, body {
-    height: 100%;
+@media only screen and (max-width: 1000px)  {
+    .container  {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .general-info-form input {
+        width: 100%;
+    }
+
+    .resume-display {
+        margin: 0px 10px;
+    }
+
 }
 
 button:hover    {
@@ -16,81 +31,72 @@ button:hover    {
 }
 
 .main-container    {
-    width: 100vw;
-    height: 100vh;
     display: grid;
-    grid-template-rows: 10% 85% 5%;
+    grid-template-rows: 60px 1fr 50px;
+    height: 100vh;
+    margin: 0;
 }
 
-//  Header
-header  {
-    grid-row-start: 1;
-    grid-row-end: 1;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(192, 240, 192);
-}
- 
 //  Container
 .container  {
-    display: grid;
-    grid-row-start: 2;
-    grid-row-end: 2;
-    grid-template-columns: 1fr 1fr;
-    padding: 10px;
-    background-color:rgb(243, 243, 243);
+    display: flex;
+    padding: 30px;
+    gap: 30px;
+    background-color:rgb(231, 225, 218);
 }
 
-.container > * {
-    margin: 10px 40px;
+.builder-display    {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
-.builder    {
-    display: grid;
-    grid-template-rows: 90% 10%;
-}
-
-.main-builder   {
-    display: grid;
-    grid-template-rows: 10% 90%;
+.builder-forms  {
     background-color: rgb(245, 245, 245);
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
-.main-builder-buttons    {
+.builder-forms-nav  {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    height: 40px;
+    padding: 0;
 }
 
-.main-builder-buttons button {
+.builder-forms-nav button {
     width: 100%;
     height: 100%;
-    border: 0px;
-    font-size: 15px;
+    border: 0;
     background-color: rgb(219, 219, 219);
 }
 
-.main-builder-buttons button:hover {
+.builder-forms-nav button:hover {
     background-color: rgb(245, 245, 245);
 }
 
-.builder-display  {
-    padding: 10px;
+.builder-forms-nav-active {
+    background-color: rgb(245, 245, 245) !important;
 }
 
-.edit-buttons   {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-end;
+
+.builder-forms-display  {
+    padding: 0px 30px 30px 30px;
 }
 
-.edit-buttons button   {
+.page-buttons   {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page-buttons button   {
+    color: white;
     display: flex;
     justify-content: space-evenly;
-    width: 100%;
+    width: 50%;
     padding: 10px;
     border: 0px;
     border-radius: 5px;
@@ -99,46 +105,162 @@ header  {
     font-size: 15px;
 }
 
-.edit-buttons button:hover   {
+.page-buttons button:hover   {
     background-color: rgb(224, 224, 224);
 }
 
 #form-example-button   {
-    background-color: rgb(199, 220, 226);
+    background-color: rgb(178, 206, 214);
 }
 
 #form-example-button:hover   {
-    background-color: rgb(191, 207, 212);
-}
-
-#print-pdf-button   {
-    background-color: rgb(201, 228, 201);
-}
-
-#print-pdf-button:hover   {
-    background-color: rgb(192, 214, 192);
+    background-color: rgb(157, 185, 194);
 }
 
 #reset-forms-button   {
-    background-color: rgb(226, 198, 198);
+    background-color: rgb(209, 168, 168);
 }
 
 #reset-forms-button:hover   {
-    background-color: rgb(211, 190, 190);
+    background-color: rgb(189, 154, 154);
 }
 
-.resume {
+.active-form   {
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden-form  {
+    display: none !important;
+}
+
+.form  {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form input    {
+    padding: 0.4rem;
+}
+
+.form textarea  {
+    height: 100px;
+    resize:none;
+    width: 50%;
+}
+
+.experience-form-buttons    {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+}
+
+.experience-form-buttons  button   {
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    width: 25%;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+}
+
+#add-job-button {
+    background-color: rgb(165, 202, 165);
+}
+
+#add-job-button:hover {
+    background-color: rgb(155, 190, 155);
+}
+
+#delete-job-button {
+    background-color: rgb(209, 168, 168);
+}
+
+#delete-job-button:hover {
+    background-color: rgb(189, 154, 154);
+}
+
+
+//  Resume Display Elements
+.resume-display {
+    padding: 10px 30px;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     background-color: rgb(255, 255, 255);
+    width: 100%;
+    max-height: 1000px;
+    max-width: 750px;
 }
 
-//  Footer
-footer  {
-    grid-row-start: 3;
-    grid-row-end: 3;
-
+.resume-general-info   {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    background-color: rgb(192, 240, 192);
+    gap: 5px;
 }
+
+.resume-general-info-contacts   {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.resume-general-info p  {
+    font-size: var(--fs-header)
+}
+
+.resume-section-header h4   {
+    padding: 0;
+    margin: 0;
+}
+
+.resume-section-content  {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--fs-body);
+}
+
+.resume-section-content-info    {
+    display: flex;
+    justify-content: space-between;
+}
+
+.resume-section-content-info-date  {
+    display: flex;
+}
+
+.resume-section-content-info-school    {
+    display: flex;
+}
+
+.resume-section-content-info-position-company   {
+    display: flex;
+}
+
+.resume-section-content-list    {
+    margin: 5px 0px 10px 0px;
+}
+
+#school-name    {
+    font-weight: bold;
+}
+
+.line-spacing   {
+    padding: 0px 5px;
+}
+
+#company-name   {
+    font-style: italic;
+}
+
+hr  {
+    margin: 4px 0px 8px 0px;
+}
+
+.position-title {
+    font-weight: bold;
+}
+

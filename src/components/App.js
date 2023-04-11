@@ -4,10 +4,7 @@ import Main from "./main/main";
 import Footer from "./footer/footer";  
 
 class App extends Component {
-  constructor()  {
-    super();
-  }
-
+ 
   render(){
     return(
       <div className="main-container">
