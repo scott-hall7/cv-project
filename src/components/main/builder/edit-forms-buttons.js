@@ -1,15 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 
-class EditFormButtons extends Component  {
-    render() {
-        const { exampleForm, resetForms } = this.props;
-        return  (
-            <div className="page-buttons">
-                <button type="submit" id="form-example-button" onClick={exampleForm}>Form Example</button>
-                <button type="submit" id="reset-forms-button" onClick={resetForms}>Reset Forms</button>
-            </div>
-        )
-    }
+const EditFormButtons = (props) => {
+    return  (
+        <div className="page-buttons">
+            <button type="submit" id="form-example-button" onClick={props.exampleForm}>Form Example</button>
+            <button type="submit" id="reset-forms-button" onClick={props.resetForms}>Reset Forms</button>
+        </div>
+    )
 }
 
 export default EditFormButtons;
