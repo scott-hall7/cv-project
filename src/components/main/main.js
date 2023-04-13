@@ -98,12 +98,10 @@ const Main = () => {
     }
 
     const setExampleForm = () => {
-        console.log('example')
         setResumeInfo(exampleForm);
     }
 
     const resetForms = () => {
-        console.log('set')
         setResumeInfo(blankForm);
     }
 
